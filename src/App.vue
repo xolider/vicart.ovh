@@ -27,11 +27,11 @@
     </div>
   </div>
   <div class="relative top-98-screen bg-slate-100 rounded-t-xl w-full md:w-5/6 mx-auto">
-    <div class="p-8">
+    <div class="p-3 md:p-8">
       <h2>A propos de moi</h2>
       <div class="shadow-md py-4 bg-white mt-6 flex flex-col md:flex-row justify-around items-center">
         <img src="./assets/photo.webp" alt="photo" class="rounded-full w-1/3 md:w-2/12 shadow-lg" ref="photoText">
-        <p class="text-justify break-words md:w-1/2" ref="textDesc">Je m'appelle Clément Vicart et suis actuellement en 5e année d'école d'Ingénieurs spécialité informatique à CESI.
+        <p class="text-justify break-words md:w-1/2 p-6 md:p-0" ref="textDesc">Je m'appelle Clément Vicart et suis actuellement en 5e année d'école d'Ingénieurs spécialité informatique à CESI.
         Je vous accompagnerai dans la réalisation de vos projets de développement, notamment en Web fullstack en <span class="text-violet-400 font-extrabold">HTML/CSS/Vue.JS</span> et
         <span class="text-orange-400 font-extrabold">Spring Boot/Express</span>, mais aussi en <span class="text-fuchsia-500 font-extrabold">Java/Kotlin</span>,
           <span class="text-green-500 font-extrabold">Android</span> et <span class="text-blue-400 font-extrabold">C#/.NET</span></p>
@@ -48,7 +48,7 @@
       </div>
       <h2 class="mt-10 mb-5">Compétences</h2>
       <div class="flex flex-wrap">
-        <div v-for="skill in skills" :key="skill.title" class="shadow-md p-4 flex-grow basis-1/4 mx-4 mb-4 bg-white">
+        <div v-for="skill in skills" :key="skill.title" class="shadow-md p-4 flex-grow md:basis-1/4 md:mx-4 mb-4 bg-white">
           <i :class="skill.icon + ' ' + skill.color" class="text-5xl"></i>
           <h3 class="my-4">{{skill.title}}</h3>
           <p class="font-light">{{skill.text}}</p>
