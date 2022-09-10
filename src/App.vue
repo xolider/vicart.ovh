@@ -1,6 +1,6 @@
 <template>
   <div class="absolute top-2 right-2 z-10">
-    <v-button href="#"><i class="fa-brands fa-github"></i> Code source</v-button>
+    <v-button href="https://github.com/xolider/vicart.ovh"><i class="fa-brands fa-github"></i> Code source</v-button>
   </div>
   <div class="h-screen w-screen bg-gradient-to-tr from-sky-600 to-green-400 fixed">
     <div class="text-white relative top-24 md:top-1/3 flex flex-col h-5/6 md:h-2/3 justify-around">
