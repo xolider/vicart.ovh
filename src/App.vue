@@ -28,9 +28,12 @@
   </div>
   <div class="relative top-98-screen bg-slate-100 rounded-t-xl w-full md:w-5/6 mx-auto">
     <div class="p-3 md:p-8">
-      <h2>A propos de moi</h2>
-      <div class="shadow-md py-4 bg-white mt-6 flex flex-col md:flex-row justify-around items-center">
-        <img src="./assets/photo.webp" alt="photo" class="rounded-full w-1/3 md:w-2/12 shadow-lg" ref="photoText">
+      <div class="flex items-center">
+        <h2 class="shrink-0">A propos de moi</h2>
+        <div class="horizontal-line"></div>
+      </div>
+      <div class="shadow-md bg-white mt-6 flex flex-col md:flex-row justify-between items-center rounded-full pr-20">
+        <img src="./assets/photo.webp" alt="photo" class="rounded-full ring-0 w-1/3 md:w-2/12" ref="photoText">
         <p class="text-justify break-words md:w-1/2 p-6 md:p-0" ref="textDesc">Je m'appelle Clément Vicart et suis actuellement en 5e année d'école d'Ingénieurs spécialité informatique à CESI.
         Je vous accompagnerai dans la réalisation de vos projets de développement, notamment en Web fullstack en <span class="text-violet-400 font-extrabold">HTML/CSS/Vue.JS</span> et
         <span class="text-orange-400 font-extrabold">Spring Boot/Express</span>, mais aussi en <span class="text-fuchsia-500 font-extrabold">Java/Kotlin</span>,
@@ -46,13 +49,20 @@
           <v-progress-bar :value="60" pgb-class="bg-indigo-700"></v-progress-bar>
         </div>
       </div>
-      <h2 class="mt-10 mb-5">Compétences</h2>
+      <div class="mt-10 mb-5 flex items-center">
+        <h2 class="shrink-0">Compétences</h2>
+        <div class="horizontal-line"></div>
+      </div>
       <div class="flex flex-wrap">
-        <div v-for="skill in skills" :key="skill.title" class="shadow-md p-4 flex-grow md:basis-1/4 md:mx-4 mb-4 bg-white">
+        <div v-for="skill in skills" :key="skill.title" class="shadow-md p-4 flex-grow md:basis-1/4 md:mx-4 mb-4 bg-white rounded">
           <i :class="skill.icon + ' ' + skill.color" class="text-5xl"></i>
           <h3 class="my-4">{{skill.title}}</h3>
           <p class="font-light">{{skill.text}}</p>
         </div>
+      </div>
+      <div class="mt-10 mb-5 flex items-center">
+        <h2 class="shrink-0">Expériences</h2>
+        <div class="horizontal-line"></div>
       </div>
     </div>
   </div>
@@ -69,6 +79,11 @@ h2 {
 
 h3 {
   @apply text-3xl font-medium;
+}
+
+.horizontal-line
+{
+  @apply w-full border-2 h-1 ml-5;
 }
 </style>
 
